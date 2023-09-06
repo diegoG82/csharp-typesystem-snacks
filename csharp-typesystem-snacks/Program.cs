@@ -22,6 +22,7 @@ else
 
 //Snack 2 : L’utente inserisce due parole in successione.
 //Il software stampa prima la parola più corta, poi la parola più lunga.
+Console.WriteLine();
 
 Console.Write("inserisci la prima parola: ");
 string word1 = Console.ReadLine();
@@ -45,6 +46,7 @@ else
 
 //Snack 3: Il software deve chiedere per 10 volte all’utente di inserire un numero.
 //Il programma stampa la somma di tutti i numeri inseriti.
+Console.WriteLine();
 
 int sumSnack3 = 0;
 
@@ -59,6 +61,7 @@ Console.WriteLine($"la somma dei numeri e': {sumSnack3}");
 
 
 //Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
+Console.WriteLine();
 
 
 int sumSnack4 = 0;
@@ -67,7 +70,7 @@ for (int i = 2; i <= 10; i++)
     sumSnack4 += i;
 }
 
-int mediaSnack4 = sumSnack4 / 9;
+float mediaSnack4 = (float)sumSnack4 / 9;
 
 Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sumSnack4}");
 Console.WriteLine($"La media dei numeri da 2 a 10 è: {mediaSnack4}");
@@ -75,6 +78,8 @@ Console.WriteLine($"La media dei numeri da 2 a 10 è: {mediaSnack4}");
 
 //Snack 5: Il software chiede all’utente di inserire un numero.
 //Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+
+Console.WriteLine();
 
 Console.Write("Inserisci un numero: ");
 int numSnack5 = Convert.ToInt32(Console.ReadLine());
@@ -91,6 +96,8 @@ else
 //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
 //Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
+Console.WriteLine();
+
 string[] amiciDiGatsby = { "Diego", "Leonardo", "Josephine", "Franco", "Giuditta" };
 
 bool[] invitati = { true, false, true, false, false };
@@ -101,7 +108,7 @@ string persona = Console.ReadLine();
 int index = Array.IndexOf(amiciDiGatsby, persona);
 if (index != -1 && invitati[index])
 {
-    Console.WriteLine($", Benvenuto alla festa, {persona}! ");
+    Console.WriteLine($"Benvenuto/a alla festa, {persona}! ");
 }
 
 else
@@ -110,6 +117,8 @@ else
 }
 
 //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+
+Console.WriteLine();
 
 List<int> arrayDaRiempire = new List<int>();
 
@@ -181,3 +190,23 @@ else
 
 //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.
 //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
+
+Console.WriteLine();
+
+Console.WriteLine("Quanti array vuoi creare?: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Random randomNum = new Random();
+
+for (int i = 0; i < N; i++)
+{
+    //creo n array composti da 10 numeri casuali da 1 a 100
+    int[] arrSnack10 = new int[10];
+    for (int j = 0; j < arrSnack10.Length; j++)
+    {
+        arrSnack10[j] = randomNum.Next(1, 101);
+    }
+
+    //stampo a schermo la lista degli array
+    Console.WriteLine("Array numero {0}: [{1}]", i + 1, string.Join(", ", arrSnack10));
+}
