@@ -124,17 +124,27 @@ for (int i = 0; i <= 5; i++)
     }
 }
 
-Console.Write("I numeri dispari sono : ");
-foreach (int num in arrayDaRiempire)
+Console.Write("I numeri dispari sono: ");
+foreach (int numSnack7 in arrayDaRiempire)
 {
-    Console.Write($"{num} - ");
+    Console.Write($"{numSnack7} ");
 }
-
-
 
 
 //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
+Console.WriteLine();
+
+int[] numSnack8 = { 10, 20, 30, 40, 50 };
+int sumSnack8 = 0;
+
+for (int i = 0; i < numSnack8.Length; i++)
+{
+    if (i % 2 != 0)
+        sumSnack8 += numSnack8[i];
+}
+
+Console.WriteLine($"La somma degli elementi in posizione dispari è: {sumSnack8}");
 
 //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
 //Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
