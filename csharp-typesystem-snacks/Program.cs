@@ -18,9 +18,29 @@ else
 {
     Console.WriteLine("i numeri sono uguali");
 }
+
+
 //Snack 2 : L’utente inserisce due parole in successione.
 //Il software stampa prima la parola più corta, poi la parola più lunga.
 
+Console.Write("inserisci la prima parola: ");
+string word1 = Console.ReadLine();
+
+Console.Write("inserisci la seconda parola: ");
+string word2 = Console.ReadLine();
+
+if (word1.Length < word2.Length)
+{
+    Console.WriteLine(word1 + " " + word2);
+}
+else if (word1.Length > word2.Length)
+{
+    Console.WriteLine(word2 + " " + word1);
+}
+else
+{
+    Console.WriteLine("Le due parole hanno la stessa lunghezza");
+}
 
 
 
