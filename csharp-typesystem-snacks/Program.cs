@@ -1,5 +1,5 @@
-﻿
-//Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+﻿//Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+
 Console.Write("inserisci il primo numero:");
 int num1 = Convert.ToInt32(Console.ReadLine());
 
@@ -149,6 +149,35 @@ Console.WriteLine($"La somma degli elementi in posizione dispari è: {sumSnack8}
 //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
 //Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
 
+Console.WriteLine();
+
+List<int> arrayDaRiempire2 = new List<int>();
+
+int sumSnack9 = 0;
+
+while (sumSnack9 < 50)
+{
+    Console.WriteLine("Inserisci un numero: ");
+
+    int numSnack9 = Convert.ToInt32(Console.ReadLine());
+    arrayDaRiempire2.Add(numSnack9);
+    sumSnack9 += numSnack9;
+}
+if (sumSnack9 > 50)
+{
+    Console.WriteLine($"Hai sforato il numero 50 e la somma è {sumSnack9}");
+}
+
+else
+{
+    Console.Write("i numeri scelti sono: ");
+    foreach (int num in arrayDaRiempire2)
+    {
+        Console.Write($"{num} ");
+    }
+
+    Console.WriteLine($"Ed il totale e' {sumSnack9}");
+}
 
 //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.
 //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
