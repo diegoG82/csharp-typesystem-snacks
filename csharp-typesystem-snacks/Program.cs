@@ -88,11 +88,28 @@ else
     Console.WriteLine($"{numSnack5} è un numero dispari qundi voglio che diventi: {numSnack5 + 1}");
 }
 
-  //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+//Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
 //Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
+string[] amiciDiGatsby = { "Diego", "Leonardo", "Josephine", "Franco", "Giuditta" };
 
-//Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+bool[] invitati = { true, false, true, false, false };
+
+Console.Write("Come ti chiami? ");
+string persona = Console.ReadLine();
+
+int index = Array.IndexOf(amiciDiGatsby, persona);
+if (index != -1 && invitati[index])
+{
+    Console.WriteLine($", Benvenuto alla festa, {persona}! ");
+}
+
+else
+{
+    Console.WriteLine($"{persona}, non sei in lista...");
+}
+
+  //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 
 
 //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
