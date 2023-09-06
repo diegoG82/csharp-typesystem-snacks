@@ -76,8 +76,19 @@ Console.WriteLine($"La media dei numeri da 2 a 10 è: {mediaSnack4}");
 //Snack 5: Il software chiede all’utente di inserire un numero.
 //Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
 
+Console.Write("Inserisci un numero: ");
+int numSnack5 = Convert.ToInt32(Console.ReadLine());
 
-//Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+if (numSnack5 % 2 == 0)
+{
+    Console.WriteLine($"{numSnack5}: è un numero pari");
+}
+else
+{
+    Console.WriteLine($"{numSnack5} è un numero dispari qundi voglio che diventi: {numSnack5 + 1}");
+}
+
+  //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
 //Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
 
