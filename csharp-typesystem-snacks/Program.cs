@@ -109,7 +109,28 @@ else
     Console.WriteLine($"{persona}, non sei in lista...");
 }
 
-  //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+//Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+
+List<int> arrayDaRiempire = new List<int>();
+
+for (int i = 0; i <= 5; i++)
+{
+    Console.WriteLine("inserisci un numero: ");
+    int numSnack7 = Convert.ToInt32(Console.ReadLine());
+
+    if (numSnack7 % 2 != 0)
+    {
+        arrayDaRiempire.Add(numSnack7);
+    }
+}
+
+Console.Write("I numeri dispari sono : ");
+foreach (int num in arrayDaRiempire)
+{
+    Console.Write($"{num} - ");
+}
+
+
 
 
 //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
