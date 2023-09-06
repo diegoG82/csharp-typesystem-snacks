@@ -1,9 +1,28 @@
 ﻿
 //Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+Console.Write("inserisci il primo numero:");
+int num1 = Convert.ToInt32(Console.ReadLine());
 
+Console.Write("inserisci il secondo numero:");
+int num2 = Convert.ToInt32(Console.ReadLine());
 
+if (num1 > num2)
+{
+    Console.WriteLine($"il numero piu' alto e' {num1}");
+}
+else if (num1 < num2)
+{
+    Console.WriteLine($"il numero piu' alto e' {num2}");
+}
+else
+{
+    Console.WriteLine("i numeri sono uguali");
+}
 //Snack 2 : L’utente inserisce due parole in successione.
 //Il software stampa prima la parola più corta, poi la parola più lunga.
+
+
+
 
 
 //Snack 3: Il software deve chiedere per 10 volte all’utente di inserire un numero.
